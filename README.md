@@ -1,2 +1,2 @@
 # KotlinSkills
-Kotlin + Coroutine + Retrofit + DataStore + ProtoDataStore
+Kotlin + Koin + Coroutine + Retrofit + DataStore + ProtoDataStore
