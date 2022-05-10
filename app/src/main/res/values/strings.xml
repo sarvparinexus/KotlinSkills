@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KotlinSkills</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="next_page">Next Page</string>
+
+    <string name="product_details">Product Details</string>
+    <string name="availability">See if it\'s available</string>
+</resources>
