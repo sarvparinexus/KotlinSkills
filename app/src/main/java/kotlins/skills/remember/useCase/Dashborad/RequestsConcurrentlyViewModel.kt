@@ -7,7 +7,7 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.launch
 
-class PerformNetworkRequestsConcurrentlyViewModel(
+class RequestsConcurrentlyViewModel(
     private val usersRepository: UsersRepository
 ) : BaseViewModel<UiState>() {
 

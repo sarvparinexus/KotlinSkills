@@ -18,7 +18,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class RequestConcurrentlyFragment : BaseFragment() {
 
     private lateinit var binding :PerformrequestsconcurrentlyFragmentBinding
-    private val viewModel by viewModel<PerformNetworkRequestsConcurrentlyViewModel>()
+    private val viewModel by viewModel<RequestsConcurrentlyViewModel>()
     private var operationStartTime = 0L
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -9,7 +9,7 @@ import kotlins.skills.remember.repository.UsersRepository
 import kotlins.skills.remember.useCase.Dashborad.UiState
 import kotlins.skills.remember.useCase.Home.HomeViewModel
 import kotlins.skills.remember.useCase.Notification.NotificationViewModel
-import kotlins.skills.remember.useCase.Dashborad.PerformNetworkRequestsConcurrentlyViewModel
+import kotlins.skills.remember.useCase.Dashborad.RequestsConcurrentlyViewModel
 import okhttp3.OkHttpClient
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -25,7 +25,7 @@ val viewModelModule = module {
         NotificationViewModel(get())
     }
     viewModel {
-        PerformNetworkRequestsConcurrentlyViewModel(get())
+        RequestsConcurrentlyViewModel(get())
     }
 
     viewModel {
