@@ -1,4 +1,4 @@
-package kotlins.skills.remember.userCase.Dashborad
+package kotlins.skills.remember.useCase.Dashborad
 
 import androidx.lifecycle.viewModelScope
 import kotlins.skills.remember.BaseViewModel

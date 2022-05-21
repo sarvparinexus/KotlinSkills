@@ -6,10 +6,10 @@ import com.google.gson.GsonBuilder
 import kotlins.skills.remember.BaseViewModel
 import kotlins.skills.remember.api.requests.UserServices
 import kotlins.skills.remember.repository.UsersRepository
-import kotlins.skills.remember.userCase.Dashborad.UiState
-import kotlins.skills.remember.userCase.Home.HomeViewModel
-import kotlins.skills.remember.userCase.Notification.NotificationViewModel
-import kotlins.skills.remember.userCase.Dashborad.PerformNetworkRequestsConcurrentlyViewModel
+import kotlins.skills.remember.useCase.Dashborad.UiState
+import kotlins.skills.remember.useCase.Home.HomeViewModel
+import kotlins.skills.remember.useCase.Notification.NotificationViewModel
+import kotlins.skills.remember.useCase.Dashborad.PerformNetworkRequestsConcurrentlyViewModel
 import okhttp3.OkHttpClient
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module

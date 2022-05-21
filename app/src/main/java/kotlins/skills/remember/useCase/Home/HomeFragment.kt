@@ -1,4 +1,4 @@
-package kotlins.skills.remember.userCase.Home
+package kotlins.skills.remember.useCase.Home
 
 import android.os.Bundle
 import android.util.Log

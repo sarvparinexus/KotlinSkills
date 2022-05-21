@@ -1,4 +1,4 @@
-package kotlins.skills.remember.userCase.Notification
+package kotlins.skills.remember.useCase.Notification
 
 import android.os.Bundle
 import android.view.LayoutInflater

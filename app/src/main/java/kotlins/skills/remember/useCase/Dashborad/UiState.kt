@@ -1,4 +1,4 @@
-package kotlins.skills.remember.userCase.Dashborad
+package kotlins.skills.remember.useCase.Dashborad
 
 import kotlins.skills.remember.api.models.users.UserData
 import retrofit2.Response

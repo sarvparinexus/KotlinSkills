@@ -1,4 +1,4 @@
-package kotlins.skills.remember.userCase.Dashborad
+package kotlins.skills.remember.useCase.Dashborad
 
 import android.os.Bundle
 import android.view.LayoutInflater

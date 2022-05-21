@@ -1,4 +1,4 @@
-package kotlins.skills.remember.userCase.Home
+package kotlins.skills.remember.useCase.Home
 
 import androidx.lifecycle.*
 import kotlins.skills.remember.api.models.ApiResult

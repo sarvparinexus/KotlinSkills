@@ -16,15 +16,15 @@
     </fragment>
     <fragment
         android:id="@+id/requestConcurrentlyFragment"
-        android:name="kotlins.skills.remember.userCase.Dashborad.RequestConcurrentlyFragment"
+        android:name="kotlins.skills.remember.useCase.Dashborad.RequestConcurrentlyFragment"
         android:label="RequestConcurrentlyFragment" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="kotlins.skills.remember.userCase.Home.HomeFragment"
+        android:name="kotlins.skills.remember.useCase.Home.HomeFragment"
         android:label="HomeFragment" />
     <fragment
         android:id="@+id/notificationsFragment"
-        android:name="kotlins.skills.remember.userCase.Notification.NotificationsFragment"
+        android:name="kotlins.skills.remember.useCase.Notification.NotificationsFragment"
         android:label="NotificationsFragment" />
     <action
         android:id="@+id/action_global_pageFragment"
