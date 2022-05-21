@@ -3,11 +3,13 @@ package kotlins.skills.remember.di
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import kotlins.skills.remember.BaseViewModel
 import kotlins.skills.remember.api.requests.UserServices
 import kotlins.skills.remember.repository.UsersRepository
-import kotlins.skills.remember.ui.viewmodels.DashBoardViewModel
-import kotlins.skills.remember.ui.viewmodels.HomeViewModel
-import kotlins.skills.remember.ui.viewmodels.NotificationViewModel
+import kotlins.skills.remember.userCase.Dashborad.UiState
+import kotlins.skills.remember.userCase.Home.HomeViewModel
+import kotlins.skills.remember.userCase.Notification.NotificationViewModel
+import kotlins.skills.remember.userCase.Dashborad.PerformNetworkRequestsConcurrentlyViewModel
 import okhttp3.OkHttpClient
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -23,10 +25,15 @@ val viewModelModule = module {
         NotificationViewModel(get())
     }
     viewModel {
+        PerformNetworkRequestsConcurrentlyViewModel(get())
+    }
 
-        DashBoardViewModel(get())
+    viewModel {
+        BaseViewModel<UiState>()
     }
 }
+
+
 
 val repositoryModule = module {
     single {

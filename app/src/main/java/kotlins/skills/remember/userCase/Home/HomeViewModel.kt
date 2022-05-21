@@ -1,4 +1,4 @@
-package kotlins.skills.remember.ui.viewmodels
+package kotlins.skills.remember.userCase.Home
 
 import androidx.lifecycle.*
 import kotlins.skills.remember.api.models.ApiResult
@@ -10,8 +10,10 @@ import kotlinx.coroutines.flow.onStart
 
 class HomeViewModel(private val usersRepository: UsersRepository) : ViewModel() {
 
-    var products: LiveData<ApiResult<UserResponse>>? = null
+    private var products: LiveData<ApiResult<UserResponse>>? = null
 
+    var _products: LiveData<ApiResult<UserResponse>>? = null
+        get() = products
 
     fun setup(): LiveData<ApiResult<UserResponse>> {
 

@@ -1,4 +1,4 @@
-package kotlins.skills.remember.ui
+package kotlins.skills.remember
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.fragment_page.buttonNextPage
 import kotlinx.android.synthetic.main.fragment_page.message
-import kotlins.skills.remember.NavigationGraphMainDirections
-import kotlins.skills.remember.R
 
 class PageFragment : BaseFragment() {
 

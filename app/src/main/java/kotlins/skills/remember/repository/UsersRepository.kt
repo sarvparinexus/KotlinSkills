@@ -10,7 +10,10 @@ import retrofit2.Response
 
 class UsersRepository(private val userServices: UserServices) {
 
-    suspend fun repoGetProductList() = userServices.fetchAllProducts()
+//    suspend fun repoGetProductList() = userServices.fetchAllProducts()
+
+
+    suspend fun getDataUserId(androidVersion:Int) = userServices.fetchDataUserId(androidVersion)
 
 
     suspend fun repoGetListUsers(): Flow<Response<UserResponse>> {

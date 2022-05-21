@@ -1,4 +1,4 @@
-package kotlins.skills.remember.ui
+package kotlins.skills.remember
 
 import androidx.fragment.app.Fragment
 

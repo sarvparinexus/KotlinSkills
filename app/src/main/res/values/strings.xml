@@ -7,4 +7,6 @@
 
     <string name="product_details">Product Details</string>
     <string name="availability">See if it\'s available</string>
+    <string name="duration">Operation took %d ms</string>
+    <string name="load_features_of_concurrently">Load Features of Android Versions concurrently</string>
 </resources>

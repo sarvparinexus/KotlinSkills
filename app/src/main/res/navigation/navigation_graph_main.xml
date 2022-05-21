@@ -5,8 +5,8 @@
 
     <fragment
         android:id="@+id/pageFragment"
-        android:name="kotlins.skills.remember.ui.PageFragment"
-        android:label="PageFragment" >
+        android:name="kotlins.skills.remember.PageFragment"
+        android:label="PageFragment">
         <argument
             android:name="pageNumber"
             app:argType="integer" />
@@ -15,16 +15,16 @@
             app:argType="string" />
     </fragment>
     <fragment
-        android:id="@+id/dashboardFragment"
-        android:name="kotlins.skills.remember.ui.DashboardFragment"
-        android:label="DashboardFragment" />
+        android:id="@+id/requestConcurrentlyFragment"
+        android:name="kotlins.skills.remember.userCase.Dashborad.RequestConcurrentlyFragment"
+        android:label="RequestConcurrentlyFragment" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="kotlins.skills.remember.ui.HomeFragment"
+        android:name="kotlins.skills.remember.userCase.Home.HomeFragment"
         android:label="HomeFragment" />
     <fragment
         android:id="@+id/notificationsFragment"
-        android:name="kotlins.skills.remember.ui.NotificationsFragment"
+        android:name="kotlins.skills.remember.userCase.Notification.NotificationsFragment"
         android:label="NotificationsFragment" />
     <action
         android:id="@+id/action_global_pageFragment"

@@ -1,4 +1,4 @@
-package kotlins.skills.remember.ui.viewmodels
+package kotlins.skills.remember.userCase.Notification
 
 import androidx.lifecycle.ViewModel
 import kotlins.skills.remember.repository.UsersRepository

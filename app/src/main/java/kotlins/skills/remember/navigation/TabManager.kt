@@ -17,7 +17,7 @@ class TabManager(private val mainActivity: MainActivity) {
 
     private val startDestinations = mapOf(
         R.id.navigation_home to R.id.homeFragment,
-        R.id.navigation_dashboard to R.id.dashboardFragment,
+        R.id.navigation_dashboard to R.id.requestConcurrentlyFragment,
         R.id.navigation_notifications to R.id.notificationsFragment
     )
     private var currentTabId: Int = R.id.navigation_home

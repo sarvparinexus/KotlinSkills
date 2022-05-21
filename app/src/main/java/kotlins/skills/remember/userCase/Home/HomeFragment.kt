@@ -1,4 +1,4 @@
-package kotlins.skills.remember.ui
+package kotlins.skills.remember.userCase.Home
 
 import android.os.Bundle
 import android.util.Log
@@ -9,13 +9,10 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlins.skills.remember.R
-import kotlins.skills.remember.api.models.ApiResult
 import kotlins.skills.remember.api.models.ApiStatus
 import kotlins.skills.remember.api.models.users.DataItem
-import kotlins.skills.remember.api.models.users.UserData
-import kotlins.skills.remember.api.models.users.UserResponse
+import kotlins.skills.remember.BaseFragment
 import kotlins.skills.remember.ui.adapter.ProductsAdapter
-import kotlins.skills.remember.ui.viewmodels.HomeViewModel
 import kotlinx.android.synthetic.main.fragment_home.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -34,7 +31,8 @@ class HomeFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        homeViewModel.setup().observe(requireActivity(), Observer {
+        homeViewModel.setup()
+        homeViewModel._products?.observe(requireActivity(), Observer {
             Log.d("TAG", "onViewCreated:observe ")
 
             when (it.status) {

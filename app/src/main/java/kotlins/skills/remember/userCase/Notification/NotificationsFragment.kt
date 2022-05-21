@@ -1,4 +1,4 @@
-package kotlins.skills.remember.ui
+package kotlins.skills.remember.userCase.Notification
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.fragment_notifications.buttonNextPage
 import kotlins.skills.remember.NavigationGraphMainDirections
 import kotlins.skills.remember.R
+import kotlins.skills.remember.BaseFragment
 
 class NotificationsFragment : BaseFragment() {
 
