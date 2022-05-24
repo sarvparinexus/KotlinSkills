@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="Gradle: com.jakewharton.timber:timber:4.7.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d3d80b6f7cb64bba8d68f179cd5fccab/transformed/timber-4.7.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/44d5a9435a9d96632bb634b42978c152/transformed/timber-4.7.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dcb41738581ff9c04a00c47eece15f5e/transformed/jetified-timber-4.7.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ed26fcb4f3745a617f346ff85f1be8e2/transformed/jetified-timber-4.7.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5e23ee7338da07902907ef282c52c149/transformed/jetified-timber-4.7.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7e186038bdb667954a355f76a5d0c6ee/transformed/jetified-timber-4.7.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f056c06db2fc30cfd070035c4fb22b80/transformed/jetified-timber-4.7.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/29bdbee074017304bb6727d65eaa60df/transformed/jetified-timber-4.7.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/2d5cb6a439bee6bba7595ecbbbd248fe/transformed/jetified-timber-4.7.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2d5cb6a439bee6bba7595ecbbbd248fe/transformed/jetified-timber-4.7.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2d5cb6a439bee6bba7595ecbbbd248fe/transformed/jetified-timber-4.7.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jakewharton.timber/timber/4.7.1/746f28c804e92fe2b0dd553616c78b1c3693ba16/timber-4.7.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jakewharton.timber/timber/4.7.1/8426e1daf26a6f9adef55a150f3d3ee944da39d/timber-4.7.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

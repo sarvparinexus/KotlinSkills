@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="Gradle: io.reactivex.rxjava2:rxandroid:2.1.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6c274304796e125864931dffc0607c51/transformed/rxandroid-2.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6227cdbf9a6de143a8ee6d1e2e344836/transformed/rxandroid-2.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bc690074dd7303f9efcdaeb34a2942cb/transformed/jetified-rxandroid-2.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/63afef425c3d4474d05a0995d5519ee4/transformed/jetified-rxandroid-2.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/54fcf335640a0778a23a4e0a51cb0f07/transformed/jetified-rxandroid-2.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/acb8879bbcc1fdb4682ab67c4e06f62d/transformed/jetified-rxandroid-2.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/cc486123b8ba199bd11a76c051ca76dc/transformed/jetified-rxandroid-2.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6a88685cf18f9af9d303d837778063c9/transformed/jetified-rxandroid-2.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4349b218afd85efebf51463d55eda612/transformed/jetified-rxandroid-2.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4349b218afd85efebf51463d55eda612/transformed/jetified-rxandroid-2.1.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4349b218afd85efebf51463d55eda612/transformed/jetified-rxandroid-2.1.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxandroid/2.1.1/634c77382eff415441853908e7e1429c786f6320/rxandroid-2.1.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxandroid/2.1.1/b7af9e13aaec7e9cd2e05b585a81ef7a27f16e16/rxandroid-2.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

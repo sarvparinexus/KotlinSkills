@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.datastore:datastore-core:1.0.0-alpha01@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0f13d2ca316256ea46b410207d59f362/transformed/datastore-core-1.0.0-alpha01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6e2d93f7ada0172a350af77110b7ea63/transformed/datastore-core-1.0.0-alpha01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/eb376382af62c03c3f7c77b55b3282d9/transformed/jetified-datastore-core-1.0.0-alpha01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6b0e2388e504dfafd06a22b5c787f035/transformed/jetified-datastore-core-1.0.0-alpha01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/55acb3e29fac69936bef212172f8e6fb/transformed/jetified-datastore-core-1.0.0-alpha01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e98ccd216cae38b3ec646c978b8b6a2d/transformed/jetified-datastore-core-1.0.0-alpha01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/33d8abaf37852c6423199709efd131bd/transformed/jetified-datastore-core-1.0.0-alpha01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5e8f11d8a1e543e6c12d73dca90db102/transformed/jetified-datastore-core-1.0.0-alpha01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9b2737d1925b4ca9a58973582a9c6280/transformed/jetified-datastore-core-1.0.0-alpha01/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9b2737d1925b4ca9a58973582a9c6280/transformed/jetified-datastore-core-1.0.0-alpha01/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/9b2737d1925b4ca9a58973582a9c6280/transformed/jetified-datastore-core-1.0.0-alpha01/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.datastore/datastore-core/1.0.0-alpha01/1616bce5ce9b2c45f81bee1ea8e4f2299d04fb00/datastore-core-1.0.0-alpha01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.work:work-runtime-ktx:2.3.4@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/382300e279f12c8cb298392f6b4401b7/transformed/work-runtime-ktx-2.3.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/289f40844af0bd7926ef7b9cdd9ab71f/transformed/work-runtime-ktx-2.3.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/66186eeb1671223c8783e9735603a12d/transformed/work-runtime-ktx-2.3.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/aa9a8939aef07a9493a5067c75b5d251/transformed/work-runtime-ktx-2.3.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dd96350f1722f0a80ec5d3c2dd8eac8e/transformed/work-runtime-ktx-2.3.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0c847863c6600a9ba7f7dcb9d9ffebf0/transformed/work-runtime-ktx-2.3.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/002c4ff4cd1484dcd75d696b1b4c2a71/transformed/work-runtime-ktx-2.3.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/90a5461a83d2495d32dc2155f5b136a6/transformed/work-runtime-ktx-2.3.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/737c91bcf85a080308f1931dab0be5a9/transformed/work-runtime-ktx-2.3.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/737c91bcf85a080308f1931dab0be5a9/transformed/work-runtime-ktx-2.3.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/737c91bcf85a080308f1931dab0be5a9/transformed/work-runtime-ktx-2.3.4/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.work/work-runtime-ktx/2.3.4/a0f2c158cea3ee2c337a833b79c5412fbc2f34e4/work-runtime-ktx-2.3.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

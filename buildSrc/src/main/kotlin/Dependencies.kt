@@ -25,9 +25,7 @@ object Deps {
 
 
     val protocJava by lazy { "io.grpc:protoc-gen-grpc-java:${Versions.protocJava}" }
-    val protoc by lazy { "com.google.protobuf:protoc:${Versions.protoc}" }
     val protoBuf by lazy { "com.google.protobuf:protobuf-javalite:${Versions.proto}" }
-    val protoLite by lazy { "com.google.protobuf:protobuf-lite:${Versions.protoLite}" }
 
     val multidex by lazy { "androidx.multidex:multidex:${Versions.multidex}" }
 
