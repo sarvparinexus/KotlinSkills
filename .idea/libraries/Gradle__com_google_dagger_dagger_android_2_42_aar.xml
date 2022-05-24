@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.dagger:dagger-android:2.42@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/56d23b852a30008fdd2481e27ee7ea07/transformed/dagger-android-2.42/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f81521dfcf247ad56f57c20379baf326/transformed/dagger-android-2.42/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6afa0081450e20d874c316082f986b19/transformed/dagger-android-2.42/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/80e543758b91c3352e6d054f3b2494af/transformed/jetified-dagger-android-2.42/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2ccb06a46116f509759cc3da1e1f4e85/transformed/jetified-dagger-android-2.42/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/69e71ec91fcba2bf94c07b0f2989354d/transformed/jetified-dagger-android-2.42/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d296680c54090a378e99d1fb4b1e3dc2/transformed/jetified-dagger-android-2.42/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5ad423114017a8b2e9a8011d9f194c89/transformed/jetified-dagger-android-2.42/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/9c03dcb7293a6d5053bd7db563105d7b/transformed/jetified-dagger-android-2.42/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9c03dcb7293a6d5053bd7db563105d7b/transformed/jetified-dagger-android-2.42/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9c03dcb7293a6d5053bd7db563105d7b/transformed/jetified-dagger-android-2.42/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger-android/2.42/666f783ae064764c9f65fa3e50ec7d660f938d5a/dagger-android-2.42-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger-android/2.42/eee667dd9dcb994389dc5d6a01da9ff5ec3d01c4/dagger-android-2.42-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

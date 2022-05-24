@@ -4,13 +4,20 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasAndroidInjector
+import dagger.android.support.AndroidSupportInjection
 import kotlinx.android.synthetic.main.fragment_notifications.buttonNextPage
 import kotlins.skills.remember.NavigationGraphMainDirections
 import kotlins.skills.remember.R
-import kotlins.skills.remember.BaseFragment
+import javax.inject.Inject
 
-class NotificationsFragment : BaseFragment() {
+class NotificationsFragment : Fragment() , HasAndroidInjector {
+
+    @Inject
+    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,6 +28,7 @@ class NotificationsFragment : BaseFragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        AndroidSupportInjection.inject(this)
         super.onViewCreated(view, savedInstanceState)
 
         buttonNextPage.setOnClickListener {
@@ -29,4 +37,6 @@ class NotificationsFragment : BaseFragment() {
             view.findNavController().navigate(action)
         }
     }
+
+    override fun androidInjector() = dispatchingAndroidInjector
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/KotlinSkills.iml" filepath="$PROJECT_DIR$/.idea/modules/KotlinSkills.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/KotlinSkills.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/KotlinSkills.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/KotlinSkills.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/KotlinSkills.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/KotlinSkills.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/KotlinSkills.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/KotlinSkills.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/KotlinSkills.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/KotlinSkills.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/KotlinSkills.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/KotlinSkills.buildSrc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/KotlinSkills.buildSrc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/KotlinSkills.buildSrc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/KotlinSkills.buildSrc.test.iml" />
+    </modules>
+  </component>
+</project>

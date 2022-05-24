@@ -5,28 +5,44 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasAndroidInjector
+import dagger.android.support.AndroidSupportInjection
 import kotlins.skills.remember.R
-import kotlins.skills.remember.Utils.toast
+import kotlins.skills.remember.utils.toast
 import kotlins.skills.remember.databinding.PerformrequestsconcurrentlyFragmentBinding
-import kotlins.skills.remember.BaseFragment
-import kotlins.skills.remember.Utils.fromHtml
-import kotlins.skills.remember.Utils.setGone
-import kotlins.skills.remember.Utils.setVisible
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import kotlins.skills.remember.utils.setGone
+import kotlins.skills.remember.utils.setVisible
+import javax.inject.Inject
 
-class RequestConcurrentlyFragment : BaseFragment() {
+class RequestConcurrentlyFragment : Fragment(), HasAndroidInjector {
 
-    private lateinit var binding :PerformrequestsconcurrentlyFragmentBinding
-    private val viewModel by viewModel<RequestsConcurrentlyViewModel>()
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
+
+    @Inject
+    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
+
+
+    private lateinit var binding: PerformrequestsconcurrentlyFragmentBinding
+
+    private val viewModel by lazy {
+        ViewModelProvider(this, viewModelFactory)[RequestsConcurrentlyViewModel::class.java]
+    }
+
     private var operationStartTime = 0L
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.uiState().observe(this, Observer { uiState ->
-            if (uiState != null) {
-                render(uiState)
-            }
-        })
+
+//        viewModel.uiState().observe(this, Observer { uiState ->
+//            if (uiState != null) {
+//                render(uiState)
+//            }
+//        })
 
     }
 
@@ -36,16 +52,22 @@ class RequestConcurrentlyFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.performrequestsconcurrently_fragment, container, false)
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.performrequestsconcurrently_fragment,
+            container,
+            false
+        )
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        AndroidSupportInjection.inject(this)
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnRequestsConcurrently.setOnClickListener {
-            viewModel.performNetworkRequestsConcurrently()
-        }
+//        binding.btnRequestsConcurrently.setOnClickListener {
+//            viewModel.performNetworkRequestsConcurrently()
+//        }
 
 //        buttonNextPage.setOnClickListener {
 //            val action =
@@ -84,13 +106,13 @@ class RequestConcurrentlyFragment : BaseFragment() {
         textViewDuration.text = getString(R.string.duration, duration)
 
         val versionFeatures = uiState.versionFeatures
-        val versionFeaturesString = versionFeatures.joinToString(separator = "<br><br>") {
-            "<b>New User Data:  ${it.body()?.data?.id} </b> <br> ${
-                it.body()?.data?.name
-            }"
-        }
+//        val versionFeaturesString = versionFeatures.joinToString(separator = "<br><br>") {
+//            "<b>New User Data:  ${it.body()?.data?.id} </b> <br> ${
+//                it.body()?.data?.name
+//            }"
+//        }
 
-        textViewResult.text = fromHtml(versionFeaturesString)
+//        textViewResult.text = "fromHtml(versionFeaturesString)"
     }
 
     private fun onError(uiState: UiState.Error) {
@@ -107,4 +129,6 @@ class RequestConcurrentlyFragment : BaseFragment() {
     private fun disableButtons() {
         binding.btnRequestsConcurrently.isEnabled = false
     }
+
+    override fun androidInjector() = dispatchingAndroidInjector
 }

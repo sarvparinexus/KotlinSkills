@@ -6,16 +6,30 @@ import android.os.PersistableBundle
 import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.android.AndroidInjection
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasAndroidInjector
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlins.skills.remember.navigation.TabManager
+import javax.inject.Inject
 
-class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener , HasAndroidInjector {
+
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
+
+    @Inject
+    internal lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
 
     private val tabManager: TabManager by lazy { TabManager(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        AndroidInjection.inject(this)
+
         setContentView(R.layout.activity_main)
         if (savedInstanceState == null) {
             tabManager.currentController = tabManager.navHomeController
@@ -25,21 +39,19 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         }
 
         bottomNavigationView.setOnNavigationItemSelectedListener(this)
-        Log.d("MainActivity", "onCreate: " + this.intent.toString())
+
     }
 
-    override fun onSaveInstanceState(outState: Bundle?, outPersistentState: PersistableBundle?) {
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
         super.onSaveInstanceState(outState, outPersistentState)
-
         tabManager.onSaveInstanceState(outState)
-
     }
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-
         tabManager.onRestoreInstanceState(savedInstanceState)
     }
+
 
     override fun supportNavigateUpTo(upIntent: Intent) {
         tabManager.supportNavigateUpTo(upIntent)
@@ -89,4 +101,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         if (deepLinkPathSegments.size < 2) 0 else deepLinkPathSegments[1].toIntOrNull() ?: 0
 
     private fun Intent.containsDeepLink(): Boolean = action == Intent.ACTION_VIEW && data != null
+
+    override fun androidInjector() = dispatchingAndroidInjector
 }

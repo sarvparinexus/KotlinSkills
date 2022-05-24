@@ -8,10 +8,9 @@ import android.widget.TextView
 import kotlins.skills.remember.R
 import kotlins.skills.remember.api.models.users.DataItem
 import kotlinx.android.synthetic.main.product_row.view.*
+import javax.inject.Inject
 
-class ProductsAdapter(
-    private val products: List<DataItem>
-) : androidx.recyclerview.widget.RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
+class ProductsAdapter @Inject constructor(private val products: List<DataItem>): androidx.recyclerview.widget.RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val product = products[position]

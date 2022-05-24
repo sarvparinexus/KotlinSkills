@@ -1,7 +1,10 @@
 package kotlins.skills.remember.useCase.Notification
 
 import androidx.lifecycle.ViewModel
-import kotlins.skills.remember.repository.UsersRepository
+import kotlins.skills.remember.api.requests.repository.UsersRepository
+import javax.inject.Inject
 
-class NotificationViewModel(private val usersRepository: UsersRepository) : ViewModel() {
+
+
+class NotificationViewModel @Inject constructor (private val userRepository: UsersRepository): ViewModel() {
 }

@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.databinding:databinding-ktx:7.2.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b271952c31dfa4ae3dadd291b20a6121/transformed/databinding-ktx-7.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/2d90846b917b7ffa5aa3bb430598da84/transformed/databinding-ktx-7.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6e9bd202e393b89449791401c7280b29/transformed/databinding-ktx-7.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3e87e41e4345ab284897de996e3d4c94/transformed/jetified-databinding-ktx-7.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a10818b99ee1a0005b2de80e602882b1/transformed/jetified-databinding-ktx-7.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/66a76efa6ea6d0b37beef9d09d0d2708/transformed/jetified-databinding-ktx-7.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/db4b2790022677d2e55efd5633e56d6c/transformed/jetified-databinding-ktx-7.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c935c5119bf14f3c74f247ac961b70db/transformed/jetified-databinding-ktx-7.2.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d16a088f719cd75df9d17e30aa9cf942/transformed/jetified-databinding-ktx-7.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d16a088f719cd75df9d17e30aa9cf942/transformed/jetified-databinding-ktx-7.2.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d16a088f719cd75df9d17e30aa9cf942/transformed/jetified-databinding-ktx-7.2.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-ktx/7.2.0/bb9d238d3da808d2e1e5a3ea0a386b1e98cdf03a/databinding-ktx-7.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
