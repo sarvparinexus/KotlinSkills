@@ -75,6 +75,5 @@ dependencies {
     implementation(Deps.activity)
 
 
-    implementation ("com.google.protobuf:protobuf-java:3.0.0-beta-1")
 
 }

@@ -1,7 +1,6 @@
 package kotlins.skills.remember.utils
 
 import android.content.Context
-//import kotlins.skills.remember.Person
 
 class PersonDataStore(context: Context) {
 //    private val dataStore: DataStore<Person>

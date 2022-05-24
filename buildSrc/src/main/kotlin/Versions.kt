@@ -19,7 +19,7 @@ object Versions {
     const val dataStore = "1.0.0-alpha01"
     const val proto = "3.20.1"
     const val protoc = "2.6.1"
-    const val protocJava = "1.45.1"
+    const val protocJava = "3.21.0-rc-2"
     const val protoLite = "3.0.0"
     const val protoBuf = "3.10.0"
     const val multidex = "2.0.1"
