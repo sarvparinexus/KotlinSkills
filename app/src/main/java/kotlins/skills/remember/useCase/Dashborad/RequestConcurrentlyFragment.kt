@@ -6,10 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import dagger.android.support.AndroidSupportInjection
+import kotlins.skills.remember.BaseViewModel
 import kotlins.skills.remember.R
 import kotlins.skills.remember.utils.toast
 import kotlins.skills.remember.databinding.PerformrequestsconcurrentlyFragmentBinding
@@ -38,11 +40,11 @@ class RequestConcurrentlyFragment : Fragment(), HasAndroidInjector {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-//        viewModel.uiState().observe(this, Observer { uiState ->
-//            if (uiState != null) {
-//                render(uiState)
-//            }
-//        })
+        viewModel.uiState().observe(this, Observer { uiState ->
+            if (uiState != null) {
+                render(uiState)
+            }
+        })
 
     }
 
@@ -65,9 +67,9 @@ class RequestConcurrentlyFragment : Fragment(), HasAndroidInjector {
         AndroidSupportInjection.inject(this)
         super.onViewCreated(view, savedInstanceState)
 
-//        binding.btnRequestsConcurrently.setOnClickListener {
-//            viewModel.performNetworkRequestsConcurrently()
-//        }
+        binding.btnRequestsConcurrently.setOnClickListener {
+            viewModel.performNetworkRequestsConcurrently()
+        }
 
 //        buttonNextPage.setOnClickListener {
 //            val action =
@@ -112,7 +114,7 @@ class RequestConcurrentlyFragment : Fragment(), HasAndroidInjector {
 //            }"
 //        }
 
-//        textViewResult.text = "fromHtml(versionFeaturesString)"
+        textViewResult.text = "fromHtml(versionFeaturesString)"
     }
 
     private fun onError(uiState: UiState.Error) {

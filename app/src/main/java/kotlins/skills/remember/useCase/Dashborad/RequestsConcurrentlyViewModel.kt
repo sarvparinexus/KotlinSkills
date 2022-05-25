@@ -2,6 +2,7 @@ package kotlins.skills.remember.useCase.Dashborad
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import kotlins.skills.remember.BaseViewModel
 import kotlins.skills.remember.api.requests.repository.UsersRepository
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
@@ -9,7 +10,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 
-class RequestsConcurrentlyViewModel @Inject constructor( private val usersRepository: UsersRepository): ViewModel(){
+class RequestsConcurrentlyViewModel @Inject constructor( private val usersRepository: UsersRepository):  BaseViewModel<UiState>(){
 
 
 //    fun performNetworkRequestsSequentially() {
@@ -34,16 +35,15 @@ class RequestsConcurrentlyViewModel @Inject constructor( private val usersReposi
 
         val dataUser27 = viewModelScope.async { usersRepository.fetchDataUserId(1) }
         val dataUser28 = viewModelScope.async { usersRepository.fetchDataUserId(2) }
-        val dataUser29 =
-            viewModelScope.async { usersRepository.fetchDataUserId(3) }
+        val dataUser29 = viewModelScope.async { usersRepository.fetchDataUserId(3) }
 
         viewModelScope.launch {
             try {
                 val versionFeatures =
                     awaitAll(dataUser27, dataUser28, dataUser29)
-//                uiState.value = UiState.Success(versionFeatures)
+                uiState.value = UiState.Success(versionFeatures)
             } catch (exception: Exception) {
-//                uiState.value = UiState.Error("Network Request failed")
+                uiState.value = UiState.Error("Network Request failed")
             }
         }
 

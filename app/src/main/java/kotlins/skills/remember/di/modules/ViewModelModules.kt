@@ -6,8 +6,10 @@ import com.example.template.di.ViewModelKey
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
+import kotlins.skills.remember.BaseViewModel
 import kotlins.skills.remember.KotlinSkillsViewModelFactory
 import kotlins.skills.remember.useCase.Dashborad.RequestsConcurrentlyViewModel
+import kotlins.skills.remember.useCase.Dashborad.UiState
 import kotlins.skills.remember.useCase.Home.HomeViewModel
 import kotlins.skills.remember.useCase.Notification.NotificationViewModel
 
@@ -27,7 +29,7 @@ internal interface ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(RequestsConcurrentlyViewModel::class)
-    fun requestsConcurrentlyViewModel(viewModel: RequestsConcurrentlyViewModel): ViewModel
+    fun requestsConcurrentlyViewModel(viewModel: RequestsConcurrentlyViewModel): BaseViewModel<UiState>
 
     @Binds
     fun kotlinSkillsViewModelFactory(viewModelFactory: KotlinSkillsViewModelFactory):
