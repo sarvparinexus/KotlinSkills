@@ -1,7 +1,5 @@
 package kotlins.skills.remember.di.dagger.modules
 
-import com.example.template.di.modules.HomeFragmentModule
-import com.example.template.di.modules.RequestConcurrentFragmentModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import kotlins.skills.remember.di.dagger.FragmentScope
@@ -15,13 +13,13 @@ internal class MainActivityModule
 @Module
 internal interface MainFragmentBuilder {
 
-    @ContributesAndroidInjector(modules = [HomeFragmentModule::class])
+    @ContributesAndroidInjector()
     @FragmentScope
     fun homeFragment(): HomeFragment
 
-    @ContributesAndroidInjector(modules = [RequestConcurrentFragmentModule::class])
+    @ContributesAndroidInjector()
     @FragmentScope
-    fun RequestConcurrentFragment(): RequestConcurrentlyFragment
+    fun requestConcurrentFragment(): RequestConcurrentlyFragment
 
 
     @ContributesAndroidInjector()

@@ -38,6 +38,7 @@ class RequestConcurrentlyFragment : Fragment(), HasAndroidInjector {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AndroidSupportInjection.inject(this)
 
         viewModel.uiState().observe(this, Observer { uiState ->
             if (uiState != null) {
@@ -63,7 +64,6 @@ class RequestConcurrentlyFragment : Fragment(), HasAndroidInjector {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        AndroidSupportInjection.inject(this)
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnRequestsConcurrently.setOnClickListener {
