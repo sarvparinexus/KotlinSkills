@@ -29,7 +29,7 @@ internal interface ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(RequestsConcurrentlyViewModel::class)
-    fun requestsConcurrentlyViewModel(viewModel: RequestsConcurrentlyViewModel): BaseViewModel<UiState>
+    fun requestsConcurrentlyViewModel(viewModel: RequestsConcurrentlyViewModel): ViewModel
 
     @Binds
     fun kotlinSkillsViewModelFactory(viewModelFactory: KotlinSkillsViewModelFactory):

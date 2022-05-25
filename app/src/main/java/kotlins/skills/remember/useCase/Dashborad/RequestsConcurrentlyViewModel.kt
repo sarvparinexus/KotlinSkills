@@ -1,6 +1,5 @@
 package kotlins.skills.remember.useCase.Dashborad
 
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlins.skills.remember.BaseViewModel
 import kotlins.skills.remember.api.requests.repository.UsersRepository
@@ -9,9 +8,9 @@ import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-
-class RequestsConcurrentlyViewModel @Inject constructor( private val usersRepository: UsersRepository):  BaseViewModel<UiState>(){
-
+class RequestsConcurrentlyViewModel @Inject constructor(
+    private val usersRepository: UsersRepository
+) : BaseViewModel<UiState>() {
 
 //    fun performNetworkRequestsSequentially() {
 //        uiState.value = UiState.Loading
@@ -31,7 +30,6 @@ class RequestsConcurrentlyViewModel @Inject constructor( private val usersReposi
 //    }
 //
     fun performNetworkRequestsConcurrently() {
-
 
         val dataUser27 = viewModelScope.async { usersRepository.fetchDataUserId(1) }
         val dataUser28 = viewModelScope.async { usersRepository.fetchDataUserId(2) }
