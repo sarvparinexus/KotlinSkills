@@ -27,7 +27,6 @@ class RequestConcurrentlyFragment : Fragment(), HasAndroidInjector {
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
 
-
     private lateinit var binding: PerformrequestsconcurrentlyFragmentBinding
 
     private val viewModel by lazy {
