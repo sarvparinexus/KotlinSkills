@@ -15,6 +15,7 @@ import kotlins.skills.remember.BaseViewModel
 import kotlins.skills.remember.R
 import kotlins.skills.remember.utils.toast
 import kotlins.skills.remember.databinding.PerformrequestsconcurrentlyFragmentBinding
+import kotlins.skills.remember.utils.fromHtml
 import kotlins.skills.remember.utils.setGone
 import kotlins.skills.remember.utils.setVisible
 import javax.inject.Inject
@@ -107,13 +108,13 @@ class RequestConcurrentlyFragment : Fragment(), HasAndroidInjector {
         textViewDuration.text = getString(R.string.duration, duration)
 
         val versionFeatures = uiState.versionFeatures
-//        val versionFeaturesString = versionFeatures.joinToString(separator = "<br><br>") {
-//            "<b>New User Data:  ${it.body()?.data?.id} </b> <br> ${
-//                it.body()?.data?.name
-//            }"
-//        }
+        val versionFeaturesString = versionFeatures.joinToString(separator = "<br><br>") {
+            "<b>New User Data:  ${it.body()?.data?.id} </b> <br> ${
+                it.body()?.data?.name
+            }"
+        }
 
-        textViewResult.text = "fromHtml(versionFeaturesString)"
+        textViewResult.text = fromHtml(versionFeaturesString)
     }
 
     private fun onError(uiState: UiState.Error) {

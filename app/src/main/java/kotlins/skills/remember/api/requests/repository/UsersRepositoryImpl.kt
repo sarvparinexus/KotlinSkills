@@ -12,7 +12,7 @@ class UsersRepositoryImpl @Inject constructor (private val apiHelper: ApiHelper)
         return apiHelper.getUsers()
     }
 
-    override suspend fun fetchDataUserId(apiLevel: Int): Flow<Response<UserData>> {
+    override suspend fun fetchDataUserId(apiLevel: Int): Response<UserData> {
         return apiHelper.getDataUser(apiLevel)
     }
 }

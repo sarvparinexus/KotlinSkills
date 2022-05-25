@@ -8,5 +8,5 @@ import retrofit2.Response
 interface ApiHelper {
 
     suspend fun getUsers(): Flow<Response<UserResponse>>
-    suspend fun getDataUser(userId:Int): Flow<Response<UserData>>
+    suspend fun getDataUser(userId:Int): Response<UserData>
 }

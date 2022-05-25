@@ -15,8 +15,8 @@ class ApiHelperImpl @Inject constructor(private val apiService: ApiServices) : A
         return flow { emit(apiService.listUsers()) }.flowOn(Dispatchers.IO)
     }
 
-    override suspend fun getDataUser(userId:Int): Flow<Response<UserData>> {
-        return flow { emit(apiService.fetchDataUserId(userId)) }.flowOn(Dispatchers.IO)
+    override suspend fun getDataUser(userId:Int): Response<UserData> {
+        return apiService.fetchDataUserId(userId)
     }
 
 

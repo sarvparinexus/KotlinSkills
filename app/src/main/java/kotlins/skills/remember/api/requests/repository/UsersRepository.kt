@@ -9,5 +9,5 @@ interface UsersRepository {
 
     suspend fun listUsers(): Flow<Response<UserResponse>>
 
-    suspend fun fetchDataUserId(apiLevel: Int): Flow<Response<UserData>>
+    suspend fun fetchDataUserId(apiLevel: Int): Response<UserData>
 }
