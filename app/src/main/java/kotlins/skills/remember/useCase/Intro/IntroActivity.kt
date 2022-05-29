@@ -28,11 +28,11 @@ class IntroActivity : AppCompatActivity(), HasAndroidInjector {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-//        if (restorePreData()) {
-//            val mainActivity = Intent(applicationContext, MainActivity::class.java)
-//            startActivity(mainActivity)
-//            finish()
-//        }
+        if (restorePreData()) {
+            val mainActivity = Intent(applicationContext, MainActivity::class.java)
+            startActivity(mainActivity)
+            finish()
+        }
         setContentView(R.layout.activity_intro)
 
         // Data
