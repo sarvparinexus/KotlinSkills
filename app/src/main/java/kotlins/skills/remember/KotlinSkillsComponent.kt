@@ -23,7 +23,7 @@ import javax.inject.Singleton
 interface KotlinSkillsComponent {
     fun inject(application: MainApp)
 
-    //New code for retrofit injection
+    // New code for retrofit injection
     fun inject(repository: UsersRepository)
 
     @Component.Builder

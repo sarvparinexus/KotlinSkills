@@ -6,12 +6,12 @@ import android.view.View
 import androidx.core.view.isInvisible
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import kotlins.skills.remember.MainActivity
+import kotlins.skills.remember.R
 import kotlinx.android.synthetic.main.activity_main.bottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.dashboardTabContainer
 import kotlinx.android.synthetic.main.activity_main.homeTabContainer
 import kotlinx.android.synthetic.main.activity_main.notificationsTabContainer
-import kotlins.skills.remember.MainActivity
-import kotlins.skills.remember.R
 
 class TabManager(private val mainActivity: MainActivity) {
 

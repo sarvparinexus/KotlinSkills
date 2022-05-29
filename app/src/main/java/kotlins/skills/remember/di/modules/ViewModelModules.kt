@@ -11,7 +11,9 @@ import kotlins.skills.remember.KotlinSkillsViewModelFactory
 import kotlins.skills.remember.useCase.Dashborad.RequestsConcurrentlyViewModel
 import kotlins.skills.remember.useCase.Dashborad.UiState
 import kotlins.skills.remember.useCase.Home.HomeViewModel
+import kotlins.skills.remember.useCase.Login.LoginViewModel
 import kotlins.skills.remember.useCase.Notification.NotificationViewModel
+import kotlins.skills.remember.useCase.Register.RegisterViewModel
 
 @Module
 internal interface ViewModelModule {
@@ -25,6 +27,16 @@ internal interface ViewModelModule {
     @IntoMap
     @ViewModelKey(HomeViewModel::class)
     fun homeViewModel(viewModel: HomeViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(LoginViewModel::class)
+    fun loginViewModel(viewModel: LoginViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(RegisterViewModel::class)
+    fun registerViewModel(viewModel: RegisterViewModel): ViewModel
 
     @Binds
     @IntoMap

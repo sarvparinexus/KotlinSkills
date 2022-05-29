@@ -3,7 +3,6 @@ package kotlins.skills.remember
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
-import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -11,11 +10,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.android.AndroidInjection
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlins.skills.remember.navigation.TabManager
+import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener , HasAndroidInjector {
+class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener, HasAndroidInjector {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -39,7 +38,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         }
 
         bottomNavigationView.setOnNavigationItemSelectedListener(this)
-
     }
 
     override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
@@ -51,7 +49,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         super.onRestoreInstanceState(savedInstanceState)
         tabManager.onRestoreInstanceState(savedInstanceState)
     }
-
 
     override fun supportNavigateUpTo(upIntent: Intent) {
         tabManager.supportNavigateUpTo(upIntent)

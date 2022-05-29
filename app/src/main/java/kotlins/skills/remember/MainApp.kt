@@ -8,10 +8,10 @@ import dagger.android.HasAndroidInjector
 import kotlins.skills.remember.di.*
 import javax.inject.Inject
 
-//import org.koin.android.ext.koin.androidContext
-//import org.koin.android.ext.koin.androidLogger
-//import org.koin.core.context.startKoin
-//import org.koin.core.logger.Level
+// import org.koin.android.ext.koin.androidContext
+// import org.koin.android.ext.koin.androidLogger
+// import org.koin.core.context.startKoin
+// import org.koin.core.logger.Level
 
 class MainApp : Application(), HasAndroidInjector {
 
@@ -27,11 +27,10 @@ class MainApp : Application(), HasAndroidInjector {
     override fun onCreate() {
         super.onCreate()
 
-        //start dagger
+        // start dagger
         DaggerKotlinSkillsComponent.builder()
             .applicationContext(applicationContext)
             .build().inject(this)
-
 
 //        startKoin {
 //            androidLogger(Level.NONE)
@@ -53,7 +52,6 @@ class MainApp : Application(), HasAndroidInjector {
         super.attachBaseContext(base)
         MultiDex.install(this)
     }
-
 
     override fun androidInjector() = dispatchingAndroidInjector
 }

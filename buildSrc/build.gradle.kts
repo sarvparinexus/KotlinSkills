@@ -26,6 +26,5 @@ object GradlePlugin {
     const val android = "com.android.tools.build:gradle:7.2.0"
 //    const val spotLess = "com.diffplug.spotless:spotless-plugin-gradle:6.6.1"
     const val navigationSafe = "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.1"
-
-//    const val protoBuf = "com.google.protobuf:protobuf-gradle-plugin:0.8.18"
+//    const val protoBuf = "com.google.protobuf:protobuf-gradle-plugin:0.8.13"
 }

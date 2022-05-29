@@ -8,6 +8,7 @@ import Kotlin
 
 plugins {
     id(Plugins.ANDROID_APPLICATION)
+//    id("com.google.protobuf")
 }
 
 dependencies {
@@ -19,7 +20,7 @@ dependencies {
     kapt(Dagger.DaggerProcessor)
 //    protobuf(Deps.protocJava)
 //    protobuf(Deps.protoc)
-//    protobuf(Deps.protoBuf)
+//    implementation(Deps.protoBuf)
 //    protobuf(Deps.protoLite)
     implementation(Dagger.JavaxInject)
     implementation(Deps.appCompat)
