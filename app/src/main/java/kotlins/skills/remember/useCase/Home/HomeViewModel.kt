@@ -11,7 +11,6 @@ import javax.inject.Inject
 
 class HomeViewModel @Inject constructor( private val usersRepository: UsersRepository) : ViewModel() {
 
-
     private var products: LiveData<ApiResult<UserResponse>>? = null
 
     var _products: LiveData<ApiResult<UserResponse>>? = null

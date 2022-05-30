@@ -19,13 +19,21 @@ package kotlins.skills.remember.useCase.Register
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import dagger.android.AndroidInjection
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasAndroidInjector
 import kotlins.skills.remember.MainActivity
 import kotlins.skills.remember.R
 import kotlins.skills.remember.useCase.TermsAndConditions.TermsAndConditionsFragment
 import javax.inject.Inject
 
-class RegistrationActivity : AppCompatActivity() {
+class RegistrationActivity : AppCompatActivity(), HasAndroidInjector {
 
+    @Inject
+    internal lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
+
+    @Inject
+    lateinit var registerFragment: RegisterFragment
     // @Inject annotated fields will be provided by Dagger
     @Inject
     lateinit var registrationViewModel: RegisterViewModel
@@ -34,9 +42,9 @@ class RegistrationActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
-
+        AndroidInjection.inject(this)
         supportFragmentManager.beginTransaction()
-            .add(R.id.fragment_holder, RegisterFragment())
+            .add(R.id.fragment_holder, registerFragment)
             .commit()
     }
 
@@ -66,4 +74,6 @@ class RegistrationActivity : AppCompatActivity() {
             super.onBackPressed()
         }
     }
+
+    override fun androidInjector() = dispatchingAndroidInjector
 }

@@ -7,6 +7,8 @@ import kotlins.skills.remember.di.dagger.ActivityScope
 import kotlins.skills.remember.di.dagger.modules.MainActivityModule
 import kotlins.skills.remember.di.dagger.modules.MainFragmentBuilder
 import kotlins.skills.remember.useCase.Intro.IntroActivity
+import kotlins.skills.remember.useCase.Login.LoginActivity
+import kotlins.skills.remember.useCase.Register.RegistrationActivity
 
 @Module
 internal interface ActivityBuilder {
@@ -15,7 +17,15 @@ internal interface ActivityBuilder {
     @ActivityScope
     fun mainActivity(): MainActivity
 
-    @ContributesAndroidInjector()
+    @ContributesAndroidInjector
     @ActivityScope
     fun introActivity(): IntroActivity
+
+    @ContributesAndroidInjector
+    @ActivityScope
+    fun loginActivity(): LoginActivity
+
+    @ContributesAndroidInjector
+    @ActivityScope
+    fun registrationActivity(): RegistrationActivity
 }

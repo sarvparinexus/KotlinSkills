@@ -1,29 +1,34 @@
 package kotlins.skills.remember.useCase.TermsAndConditions
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasAndroidInjector
 import dagger.android.support.AndroidSupportInjection
+import kotlins.skills.remember.MainActivity
 import kotlins.skills.remember.R
+import kotlins.skills.remember.databinding.FragmentRegisterBinding
 import kotlins.skills.remember.useCase.Register.RegisterViewModel
 import javax.inject.Inject
 
-class TermsAndConditionsFragment : Fragment() {
+class TermsAndConditionsFragment @Inject constructor() : Fragment() , HasAndroidInjector {
 
-    // @Inject annotated fields will be provided by Dagger
     @Inject
-    lateinit var registrationViewModel: RegisterViewModel
+    lateinit var viewModelFactory: ViewModelProvider.Factory
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-
-        // Grabs the registrationComponent from the Activity and injects this Fragment
-        AndroidSupportInjection.inject(this)
+    @Inject
+    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
+    private val registrationViewModel by lazy {
+        ViewModelProvider(this, viewModelFactory)[RegisterViewModel::class.java]
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,9 +39,14 @@ class TermsAndConditionsFragment : Fragment() {
 
         view.findViewById<Button>(R.id.next).setOnClickListener {
             registrationViewModel.acceptTCs()
-//            MainActivity
+            startActivity(Intent(activity, MainActivity::class.java))
+            activity?.finish()
+
         }
 
         return view
     }
+
+    override fun androidInjector() = dispatchingAndroidInjector
+
 }

@@ -3,21 +3,33 @@ package kotlins.skills.remember
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.asLiveData
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.android.AndroidInjection
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import kotlins.skills.remember.navigation.TabManager
+import kotlins.skills.remember.useCase.Intro.IntroActivity
+import kotlins.skills.remember.utils.UserDataStore
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.flow.last
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener, HasAndroidInjector {
+class MainActivity :
+    AppCompatActivity(),
+    BottomNavigationView.OnNavigationItemSelectedListener,
+    HasAndroidInjector {
+    val TAG = MainActivity::class.java.simpleName
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
+
 
     @Inject
     internal lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
@@ -28,8 +40,9 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         super.onCreate(savedInstanceState)
 
         AndroidInjection.inject(this)
-
+        Log.d(TAG, "onCreate:  ")
         setContentView(R.layout.activity_main)
+
         if (savedInstanceState == null) {
             tabManager.currentController = tabManager.navHomeController
             if (intent.containsDeepLink()) {

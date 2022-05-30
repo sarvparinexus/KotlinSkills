@@ -2,37 +2,56 @@ package kotlins.skills.remember.useCase.Intro
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.tabs.TabLayout
+import dagger.android.AndroidInjection
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import kotlins.skills.remember.MainActivity
 import kotlins.skills.remember.R
+import kotlins.skills.remember.useCase.Login.LoginActivity
+import kotlins.skills.remember.utils.UserDataStore
 import kotlinx.android.synthetic.main.activity_intro.*
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class IntroActivity : AppCompatActivity(), HasAndroidInjector {
+
+    val TAG = IntroActivity::class.java.simpleName
 
     var introViewPagerAdapter: IntroViewPagerAdapter? = null
 
     @Inject
     internal lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Any>
 
+    @Inject
+    lateinit var userDataStore: UserDataStore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AndroidInjection.inject(this)
+        Log.d(TAG, "onStart: ")
+        // Updates Intro
+//        userDataStore.userIntroFlow.asLiveData().observe(this, {
+//            Log.d(TAG, "onStart: userIntroFlow " + it)
+//            if (it) {
+//                val mainActivity = Intent(applicationContext, MainActivity::class.java)
+//                startActivity(mainActivity)
+//                finish()
+//            }
+//        })
+
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        if (restorePreData()) {
-            val mainActivity = Intent(applicationContext, MainActivity::class.java)
-            startActivity(mainActivity)
-            finish()
-        }
+
         setContentView(R.layout.activity_intro)
 
         // Data
@@ -68,7 +87,7 @@ class IntroActivity : AppCompatActivity(), HasAndroidInjector {
 
         // Button Next
         btn_next.setOnClickListener(
-            View.OnClickListener {
+            {
                 screen_viewpager.setCurrentItem(
                     screen_viewpager.getCurrentItem() + 1,
                     true
@@ -91,26 +110,15 @@ class IntroActivity : AppCompatActivity(), HasAndroidInjector {
 
         // Button Get Started
         btn_get_started.setOnClickListener(
-            View.OnClickListener {
-                val mainActivity = Intent(applicationContext, MainActivity::class.java)
+            {
+                lifecycleScope.launch {
+                    userDataStore.storeIntro(true)
+                }
+                val mainActivity = Intent(applicationContext, LoginActivity::class.java)
                 startActivity(mainActivity)
-                savePrefsData()
                 finish()
             }
         )
-    }
-
-    private fun restorePreData(): Boolean {
-        val preferences =
-            applicationContext.getSharedPreferences("myPrefs", MODE_PRIVATE)
-        return preferences.getBoolean("isIntroOpened", false)
-    }
-
-    private fun savePrefsData() {
-        val preferences = applicationContext.getSharedPreferences("myPrefs", MODE_PRIVATE)
-        val editor = preferences.edit()
-        editor.putBoolean("isIntroOpened", true)
-        editor.apply()
     }
 
     private fun loadLastScreen() {

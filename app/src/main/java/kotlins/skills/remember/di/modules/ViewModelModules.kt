@@ -6,10 +6,8 @@ import com.example.template.di.ViewModelKey
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
-import kotlins.skills.remember.BaseViewModel
 import kotlins.skills.remember.KotlinSkillsViewModelFactory
 import kotlins.skills.remember.useCase.Dashborad.RequestsConcurrentlyViewModel
-import kotlins.skills.remember.useCase.Dashborad.UiState
 import kotlins.skills.remember.useCase.Home.HomeViewModel
 import kotlins.skills.remember.useCase.Login.LoginViewModel
 import kotlins.skills.remember.useCase.Notification.NotificationViewModel
